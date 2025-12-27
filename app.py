@@ -21,15 +21,14 @@ def save_data(df):
     df.to_csv(DATA_FILE, index=False)
 
 def get_date_for_day(annee, semaine, jour_nom):
-    """Calcule la date (JJ/MM) pour un jour donné d'une semaine précise"""
+    """Calcule la date (JJ/MM) pour un jour donné d'une semaine précise selon la norme ISO"""
     jours_map = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
-    # On crée une date à partir du premier jour de l'année + le nombre de semaines
-    d = datetime.date(annee, 1, 4) # Le 4 janvier est toujours dans la semaine 1
-    d = d + datetime.timedelta(weeks=semaine-1)
-    # On ajuste pour tomber sur le bon lundi
-    d = d - datetime.timedelta(days=d.weekday())
-    # On ajoute l'index du jour souhaité
-    target_date = d + datetime.timedelta(days=jours_map.index(jour_nom))
+    # Calcul basé sur la norme ISO : la semaine 1 est celle qui contient le premier jeudi de l'année
+    premiere_date = datetime.date(annee, 1, 4)
+    # Trouver le lundi de cette semaine
+    lundi_semaine_1 = premiere_date - datetime.timedelta(days=premiere_date.weekday())
+    # Ajouter le nombre de semaines et le jour souhaité
+    target_date = lundi_semaine_1 + datetime.timedelta(weeks=semaine-1, days=jours_map.index(jour_nom))
     return target_date.strftime("%d/%m")
 
 # --- INTERFACE ---
@@ -79,7 +78,7 @@ with tab2:
         
         nouvelles_donnees = []
         for jour in jours:
-            date_str = get_date_for_day(sel_annee, int(sel_sem), jour)
+            date_str = get_date_for_day(int(sel_annee), int(sel_sem), jour)
             st.subheader(f"{jour} {date_str}")
             col_m, col_s = st.columns(2)
             
@@ -113,10 +112,10 @@ with tab3:
             if st.button(f"Voir Semaine {row['Semaine']} - {row['Annee']}"):
                 df_hist = df[(df['Annee'] == row['Annee']) & (df['Semaine'] == row['Semaine'])]
                 # On prépare le tableau avec les dates pour l'historique aussi
-                df_hist['Jour_Date'] = df_hist.apply(lambda x: f"{x['Jour']} {get_date_for_day(x['Annee'], x['Semaine'], x['Jour'])}", axis=1)
+                df_hist['Jour_Date'] = df_hist.apply(lambda x: f"{x['Jour']} {get_date_for_day(int(x['Annee']), int(x['Semaine']), x['Jour'])}", axis=1)
                 pivot_df = df_hist.pivot(index='Jour_Date', columns='Moment', values='Menu')
                 # Trier selon l'ordre des jours de la semaine
-                ordre_jours_date = [f"{j} {get_date_for_day(row['Annee'], row['Semaine'], j)}" for j in jours]
+                ordre_jours_date = [f"{j} {get_date_for_day(int(row['Annee']), int(row['Semaine']), j)}" for j in jours]
                 st.table(pivot_df.reindex(ordre_jours_date))
     else:
         st.write("L'historique est vide.")
