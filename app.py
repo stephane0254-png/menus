@@ -2,32 +2,47 @@ import streamlit as st
 import pandas as pd
 import datetime
 import os
+from github import Github
 
 # Configuration de la page
 st.set_page_config(page_title="Menus de la Famille", layout="wide")
 
-# Nom du fichier de données
+# Configuration GitHub (Récupérée depuis les Secrets Streamlit)
+try:
+    token = st.secrets["GITHUB_TOKEN"]
+    repo_name = st.secrets["REPO_NAME"]
+    g = Github(token)
+    repo = g.get_repo(repo_name)
+except:
+    st.error("Configuration GitHub manquante dans les Secrets Streamlit.")
+
 DATA_FILE = "menus_famille.csv"
 
-# Initialisation du fichier CSV s'il n'existe pas
-if not os.path.exists(DATA_FILE):
-    df_init = pd.DataFrame(columns=['Annee', 'Semaine', 'Jour', 'Moment', 'Menu'])
-    df_init.to_csv(DATA_FILE, index=False)
-
 def load_data():
-    return pd.read_csv(DATA_FILE)
+    # On essaie de lire le fichier sur GitHub pour être sûr d'avoir la version la plus récente
+    try:
+        content = repo.get_contents(DATA_FILE)
+        return pd.read_csv(content.download_url)
+    except:
+        if os.path.exists(DATA_FILE):
+            return pd.read_csv(DATA_FILE)
+        return pd.DataFrame(columns=['Annee', 'Semaine', 'Jour', 'Moment', 'Menu'])
 
-def save_data(df):
-    df.to_csv(DATA_FILE, index=False)
+def save_to_github(df):
+    csv_content = df.to_csv(index=False)
+    try:
+        contents = repo.get_contents(DATA_FILE)
+        repo.update_file(DATA_FILE, "Mise à jour des menus", csv_content, contents.sha)
+        st.success("Sauvegarde permanente réussie sur GitHub !")
+    except Exception as e:
+        # Si le fichier n'existe pas encore sur GitHub
+        repo.create_file(DATA_FILE, "Création du fichier menus", csv_content)
+        st.success("Fichier créé et sauvegardé sur GitHub !")
 
 def get_date_for_day(annee, semaine, jour_nom):
-    """Calcule la date (JJ/MM) pour un jour donné d'une semaine précise selon la norme ISO"""
     jours_map = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
-    # Calcul basé sur la norme ISO : la semaine 1 est celle qui contient le premier jeudi de l'année
     premiere_date = datetime.date(annee, 1, 4)
-    # Trouver le lundi de cette semaine
     lundi_semaine_1 = premiere_date - datetime.timedelta(days=premiere_date.weekday())
-    # Ajouter le nombre de semaines et le jour souhaité
     target_date = lundi_semaine_1 + datetime.timedelta(weeks=semaine-1, days=jours_map.index(jour_nom))
     return target_date.strftime("%d/%m")
 
@@ -77,14 +92,15 @@ with tab2:
         st.divider()
         
         nouvelles_donnees = []
+        df_actuel = load_data()
+        
         for jour in jours:
             date_str = get_date_for_day(int(sel_annee), int(sel_sem), jour)
             st.subheader(f"{jour} {date_str}")
             col_m, col_s = st.columns(2)
             
-            df = load_data()
-            exist_m = df[(df['Annee'] == sel_annee) & (df['Semaine'] == sel_sem) & (df['Jour'] == jour) & (df['Moment'] == "Midi")]['Menu'].values
-            exist_s = df[(df['Annee'] == sel_annee) & (df['Semaine'] == sel_sem) & (df['Jour'] == jour) & (df['Moment'] == "Soir")]['Menu'].values
+            exist_m = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Midi")]['Menu'].values
+            exist_s = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Soir")]['Menu'].values
             
             val_m = col_m.text_input(f"Midi ({jour})", value=exist_m[0] if len(exist_m) > 0 else "", key=f"m_{jour}")
             val_s = col_s.text_input(f"Soir ({jour})", value=exist_s[0] if len(exist_s) > 0 else "", key=f"s_{jour}")
@@ -98,9 +114,8 @@ with tab2:
             df = load_data()
             df = df[~((df['Annee'] == sel_annee) & (df['Semaine'] == sel_sem))]
             new_df = pd.DataFrame(nouvelles_donnees, columns=['Annee', 'Semaine', 'Jour', 'Moment', 'Menu'])
-            df = pd.concat([df, new_df], ignore_index=True)
-            save_data(df)
-            st.success(f"Menus de la semaine {sel_sem} enregistrés !")
+            df_final = pd.concat([df, new_df], ignore_index=True)
+            save_to_github(df_final)
 
 # --- ONGLET 3 : HISTORIQUE ---
 with tab3:
@@ -111,10 +126,8 @@ with tab3:
         for _, row in archives.iterrows():
             if st.button(f"Voir Semaine {row['Semaine']} - {row['Annee']}"):
                 df_hist = df[(df['Annee'] == row['Annee']) & (df['Semaine'] == row['Semaine'])]
-                # On prépare le tableau avec les dates pour l'historique aussi
                 df_hist['Jour_Date'] = df_hist.apply(lambda x: f"{x['Jour']} {get_date_for_day(int(x['Annee']), int(x['Semaine']), x['Jour'])}", axis=1)
                 pivot_df = df_hist.pivot(index='Jour_Date', columns='Moment', values='Menu')
-                # Trier selon l'ordre des jours de la semaine
                 ordre_jours_date = [f"{j} {get_date_for_day(int(row['Annee']), int(row['Semaine']), j)}" for j in jours]
                 st.table(pivot_df.reindex(ordre_jours_date))
     else:
