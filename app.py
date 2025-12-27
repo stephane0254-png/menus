@@ -46,10 +46,13 @@ def save_to_github(df):
 
 def get_date_for_day(annee, semaine, jour_nom):
     jours_map = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
-    premiere_date = datetime.date(int(annee), 1, 4)
-    lundi_semaine_1 = premiere_date - datetime.timedelta(days=premiere_date.weekday())
-    target_date = lundi_semaine_1 + datetime.timedelta(weeks=int(semaine)-1, days=jours_map.index(jour_nom))
-    return target_date.strftime("%d/%m")
+    try:
+        premiere_date = datetime.date(int(annee), 1, 4)
+        lundi_semaine_1 = premiere_date - datetime.timedelta(days=premiere_date.weekday())
+        target_date = lundi_semaine_1 + datetime.timedelta(weeks=int(semaine)-1, days=jours_map.index(jour_nom))
+        return target_date.strftime("%d/%m")
+    except:
+        return "??"
 
 # --- INTERFACE ---
 st.title("🍴 Planning des Menus Familiaux")
@@ -92,38 +95,42 @@ with tab1:
 with tab2:
     st.header("Gestion des menus")
     
-    # Utilisation d'un formulaire pour regrouper toutes les saisies
+    # Sélections hors du formulaire pour permettre le rafraîchissement immédiat des champs
+    c1, c2 = st.columns(2)
+    sel_annee = c1.number_input("Année", value=annee_actuelle, step=1)
+    sel_sem = c2.number_input("Numéro de Semaine", value=semaine_actuelle, min_value=1, max_value=53, step=1)
+    
+    st.divider()
+
+    # On pré-charge les données pour la semaine sélectionnée
+    df_actuel = load_data()
+    
     with st.form("form_saisie", clear_on_submit=False):
-        c1, c2 = st.columns(2)
-        sel_annee = c1.number_input("Année", value=annee_actuelle, step=1)
-        sel_sem = c2.number_input("Numéro de Semaine", value=semaine_actuelle, min_value=1, max_value=53, step=1)
-        
-        st.divider()
-        
-        # On charge les données existantes une seule fois pour pré-remplir les champs
-        df_actuel = load_data()
-        
         dict_saisie = {}
         for jour in jours:
             date_str = get_date_for_day(sel_annee, sel_sem, jour)
             st.subheader(f"{jour} {date_str}")
             col_m, col_s = st.columns(2)
             
-            exist_m = [""]
-            exist_s = [""]
-            if not df_actuel.empty:
-                exist_m = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Midi")]['Menu'].values
-                exist_s = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Soir")]['Menu'].values
+            # Recherche des menus existants spécifiquement pour l'année et la semaine sélectionnées
+            val_m_exist = ""
+            val_s_exist = ""
             
-            # Les champs de texte dans un formulaire ne déclenchent pas de mise à jour tant qu'on n'appuie pas sur le bouton
-            dict_saisie[f"{jour}_Midi"] = col_m.text_input(f"Midi ({jour})", value=exist_m[0] if len(exist_m) > 0 and pd.notna(exist_m[0]) else "", key=f"m_{jour}")
-            dict_saisie[f"{jour}_Soir"] = col_s.text_input(f"Soir ({jour})", value=exist_s[0] if len(exist_s) > 0 and pd.notna(exist_s[0]) else "", key=f"s_{jour}")
+            if not df_actuel.empty:
+                m_data = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Midi")]['Menu'].values
+                s_data = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Soir")]['Menu'].values
+                
+                if len(m_data) > 0 and pd.notna(m_data[0]): val_m_exist = m_data[0]
+                if len(s_data) > 0 and pd.notna(s_data[0]): val_s_exist = s_data[0]
+            
+            # On utilise une clé unique qui change avec la semaine pour forcer Streamlit à vider/remplir le champ
+            dict_saisie[f"{jour}_Midi"] = col_m.text_input(f"Midi ({jour})", value=val_m_exist, key=f"input_m_{sel_annee}_{sel_sem}_{jour}")
+            dict_saisie[f"{jour}_Soir"] = col_s.text_input(f"Soir ({jour})", value=val_s_exist, key=f"input_s_{sel_annee}_{sel_sem}_{jour}")
             
         submit = st.form_submit_button("Enregistrer les menus")
         
         if submit:
             if config_ok:
-                # Préparation des nouvelles données à partir du dictionnaire de saisie
                 nouvelles_donnees = []
                 for jour in jours:
                     nouvelles_donnees.append([sel_annee, sel_sem, jour, "Midi", dict_saisie[f"{jour}_Midi"]])
@@ -135,10 +142,9 @@ with tab2:
                 new_df = pd.DataFrame(nouvelles_donnees, columns=COLUMNS)
                 df_final = pd.concat([df, new_df], ignore_index=True)
                 save_to_github(df_final)
-                # Petit rafraîchissement pour voir les changements
                 st.rerun()
             else:
-                st.error("Impossible d'enregistrer : la configuration GitHub est manquante.")
+                st.error("Configuration GitHub manquante.")
 
 # --- ONGLET 3 : HISTORIQUE ---
 with tab3:
