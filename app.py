@@ -47,8 +47,9 @@ def save_to_github(df):
 def get_date_for_day(annee, semaine, jour_nom):
     jours_map = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     try:
-        premiere_date = datetime.date(int(annee), 1, 4)
-        lundi_semaine_1 = premiere_date - datetime.timedelta(days=premiere_date.weekday())
+        # ISO week date logic
+        date_jan4 = datetime.date(int(annee), 1, 4)
+        lundi_semaine_1 = date_jan4 - datetime.timedelta(days=date_jan4.weekday())
         target_date = lundi_semaine_1 + datetime.timedelta(weeks=int(semaine)-1, days=jours_map.index(jour_nom))
         return target_date.strftime("%d/%m")
     except:
@@ -57,52 +58,94 @@ def get_date_for_day(annee, semaine, jour_nom):
 # --- INTERFACE ---
 st.title("🍴 Planning des Menus Familiaux")
 
-tab1, tab2, tab3 = st.tabs(["📅 Semaine en cours", "📝 Saisir / Modifier", "📜 Historique"])
+tab1, tab2, tab3 = st.tabs(["📅 Semaines à venir", "📝 Saisir / Modifier", "📜 Historique"])
 
 jours = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 moments = ["Midi", "Soir"]
 
-# --- ONGLET 1 : AFFICHAGE SEMAINE EN COURS ---
+# --- ONGLET 1 : AFFICHAGE SEMAINE EN COURS ET SUIVANTES ---
 with tab1:
     today = datetime.date.today()
     annee_actuelle = today.year
     semaine_actuelle = today.isocalendar()[1]
     
-    st.header(f"Semaine {semaine_actuelle} ({annee_actuelle})")
-    
     df = load_data()
-    if not df.empty:
-        df_semaine = df[(df['Annee'] == annee_actuelle) & (df['Semaine'] == semaine_actuelle)]
-    else:
-        df_semaine = pd.DataFrame()
     
-    if df_semaine.empty:
-        st.info("Aucun menu renseigné pour cette semaine.")
+    # On récupère toutes les semaines renseignées >= semaine actuelle
+    if not df.empty:
+        futures_semaines = df[
+            ((df['Annee'] == annee_actuelle) & (df['Semaine'] >= semaine_actuelle)) | 
+            (df['Annee'] > annee_actuelle)
+        ][['Annee', 'Semaine']].drop_duplicates().sort_values(['Annee', 'Semaine'])
     else:
-        for jour in jours:
-            date_str = get_date_for_day(annee_actuelle, semaine_actuelle, jour)
-            with st.expander(f"**{jour} {date_str}**", expanded=True):
-                col1, col2 = st.columns(2)
-                for m in moments:
-                    menu_text = df_semaine[(df_semaine['Jour'] == jour) & (df_semaine['Moment'] == m)]['Menu'].values
-                    val = menu_text[0] if len(menu_text) > 0 and pd.notna(menu_text[0]) else "Rien de prévu"
-                    if m == "Midi":
-                        col1.markdown(f"**☀️ Midi :** {val}")
-                    else:
-                        col2.markdown(f"**🌙 Soir :** {val}")
+        futures_semaines = pd.DataFrame()
+
+    if futures_semaines.empty:
+        st.info(f"Aucun menu renseigné à partir de la semaine {semaine_actuelle}.")
+    else:
+        for _, row in futures_semaines.iterrows():
+            ann, sem = int(row['Annee']), int(row['Semaine'])
+            label = f"Semaine {sem} ({ann})"
+            if sem == semaine_actuelle and ann == annee_actuelle:
+                label += " - EN COURS"
+            
+            st.header(label)
+            df_semaine = df[(df['Annee'] == ann) & (df['Semaine'] == sem)]
+            
+            for jour in jours:
+                date_str = get_date_for_day(ann, sem, jour)
+                # On n'affiche que si au moins un des deux moments est rempli
+                menu_jour = df_semaine[df_semaine['Jour'] == jour]
+                if not menu_jour['Menu'].dropna().str.strip().eq("").all():
+                    with st.expander(f"**{jour} {date_str}**", expanded=True):
+                        col1, col2 = st.columns(2)
+                        for m in moments:
+                            val = menu_jour[menu_jour['Moment'] == m]['Menu'].values
+                            txt = val[0] if len(val) > 0 and pd.notna(val[0]) and val[0].strip() != "" else "Rien de prévu"
+                            if m == "Midi":
+                                col1.markdown(f"**☀️ Midi :** {txt}")
+                            else:
+                                col2.markdown(f"**🌙 Soir :** {txt}")
+            st.divider()
 
 # --- ONGLET 2 : SAISIR / MODIFIER ---
 with tab2:
     st.header("Gestion des menus")
     
-    # Sélections hors du formulaire pour permettre le rafraîchissement immédiat des champs
-    c1, c2 = st.columns(2)
-    sel_annee = c1.number_input("Année", value=annee_actuelle, step=1)
-    sel_sem = c2.number_input("Numéro de Semaine", value=semaine_actuelle, min_value=1, max_value=53, step=1)
+    # Initialisation de l'état pour la navigation si non présent
+    if 'sel_semaine' not in st.session_state:
+        st.session_state.sel_semaine = datetime.date.today().isocalendar()[1]
+    if 'sel_annee' not in st.session_state:
+        st.session_state.sel_annee = datetime.date.today().year
+
+    # Boutons de navigation
+    nav_col1, nav_col2, nav_col3, nav_col4 = st.columns([1, 2, 2, 1])
+    
+    if nav_col1.button("⬅️ Précédente"):
+        if st.session_state.sel_semaine == 1:
+            st.session_state.sel_semaine = 52
+            st.session_state.sel_annee -= 1
+        else:
+            st.session_state.sel_semaine -= 1
+        st.rerun()
+
+    sel_annee = nav_col2.number_input("Année", value=st.session_state.sel_annee, step=1)
+    sel_sem = nav_col3.number_input("Semaine", value=st.session_state.sel_semaine, min_value=1, max_value=53, step=1)
+    
+    # Mise à jour de l'état si saisie manuelle
+    st.session_state.sel_annee = sel_annee
+    st.session_state.sel_semaine = sel_sem
+
+    if nav_col4.button("Suivante ➡️"):
+        if st.session_state.sel_semaine >= 52:
+            st.session_state.sel_semaine = 1
+            st.session_state.sel_annee += 1
+        else:
+            st.session_state.sel_semaine += 1
+        st.rerun()
     
     st.divider()
 
-    # On pré-charge les données pour la semaine sélectionnée
     df_actuel = load_data()
     
     with st.form("form_saisie", clear_on_submit=False):
@@ -112,20 +155,17 @@ with tab2:
             st.subheader(f"{jour} {date_str}")
             col_m, col_s = st.columns(2)
             
-            # Recherche des menus existants spécifiquement pour l'année et la semaine sélectionnées
             val_m_exist = ""
             val_s_exist = ""
             
             if not df_actuel.empty:
                 m_data = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Midi")]['Menu'].values
                 s_data = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Soir")]['Menu'].values
-                
                 if len(m_data) > 0 and pd.notna(m_data[0]): val_m_exist = m_data[0]
                 if len(s_data) > 0 and pd.notna(s_data[0]): val_s_exist = s_data[0]
             
-            # On utilise une clé unique qui change avec la semaine pour forcer Streamlit à vider/remplir le champ
-            dict_saisie[f"{jour}_Midi"] = col_m.text_input(f"Midi ({jour})", value=val_m_exist, key=f"input_m_{sel_annee}_{sel_sem}_{jour}")
-            dict_saisie[f"{jour}_Soir"] = col_s.text_input(f"Soir ({jour})", value=val_s_exist, key=f"input_s_{sel_annee}_{sel_sem}_{jour}")
+            dict_saisie[f"{jour}_Midi"] = col_m.text_input(f"Midi ({jour})", value=val_m_exist, key=f"in_m_{sel_annee}_{sel_sem}_{jour}")
+            dict_saisie[f"{jour}_Soir"] = col_s.text_input(f"Soir ({jour})", value=val_s_exist, key=f"in_s_{sel_annee}_{sel_sem}_{jour}")
             
         submit = st.form_submit_button("Enregistrer les menus")
         
@@ -153,7 +193,7 @@ with tab3:
     if not df.empty and len(df) > 0:
         archives = df[['Annee', 'Semaine']].drop_duplicates().sort_values(['Annee', 'Semaine'], ascending=False)
         for _, row in archives.iterrows():
-            if st.button(f"Voir Semaine {int(row['Semaine'])} - {int(row['Annee'])}"):
+            if st.button(f"Voir Semaine {int(row['Semaine'])} - {int(row['Annee'])}", key=f"hist_{row['Annee']}_{row['Semaine']}"):
                 df_hist = df[(df['Annee'] == row['Annee']) & (df['Semaine'] == row['Semaine'])]
                 df_hist['Jour_Date'] = df_hist.apply(lambda x: f"{x['Jour']} {get_date_for_day(x['Annee'], x['Semaine'], x['Jour'])}", axis=1)
                 pivot_df = df_hist.pivot(index='Jour_Date', columns='Moment', values='Menu')
