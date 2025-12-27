@@ -92,16 +92,18 @@ with tab1:
 with tab2:
     st.header("Gestion des menus")
     
-    with st.form("form_saisie"):
+    # Utilisation d'un formulaire pour regrouper toutes les saisies
+    with st.form("form_saisie", clear_on_submit=False):
         c1, c2 = st.columns(2)
         sel_annee = c1.number_input("Année", value=annee_actuelle, step=1)
         sel_sem = c2.number_input("Numéro de Semaine", value=semaine_actuelle, min_value=1, max_value=53, step=1)
         
         st.divider()
         
-        nouvelles_donnees = []
+        # On charge les données existantes une seule fois pour pré-remplir les champs
         df_actuel = load_data()
         
+        dict_saisie = {}
         for jour in jours:
             date_str = get_date_for_day(sel_annee, sel_sem, jour)
             st.subheader(f"{jour} {date_str}")
@@ -113,24 +115,30 @@ with tab2:
                 exist_m = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Midi")]['Menu'].values
                 exist_s = df_actuel[(df_actuel['Annee'] == sel_annee) & (df_actuel['Semaine'] == sel_sem) & (df_actuel['Jour'] == jour) & (df_actuel['Moment'] == "Soir")]['Menu'].values
             
-            val_m = col_m.text_input(f"Midi ({jour})", value=exist_m[0] if len(exist_m) > 0 and pd.notna(exist_m[0]) else "", key=f"m_{jour}")
-            val_s = col_s.text_input(f"Soir ({jour})", value=exist_s[0] if len(exist_s) > 0 and pd.notna(exist_s[0]) else "", key=f"s_{jour}")
-            
-            nouvelles_donnees.append([sel_annee, sel_sem, jour, "Midi", val_m])
-            nouvelles_donnees.append([sel_annee, sel_sem, jour, "Soir", val_s])
+            # Les champs de texte dans un formulaire ne déclenchent pas de mise à jour tant qu'on n'appuie pas sur le bouton
+            dict_saisie[f"{jour}_Midi"] = col_m.text_input(f"Midi ({jour})", value=exist_m[0] if len(exist_m) > 0 and pd.notna(exist_m[0]) else "", key=f"m_{jour}")
+            dict_saisie[f"{jour}_Soir"] = col_s.text_input(f"Soir ({jour})", value=exist_s[0] if len(exist_s) > 0 and pd.notna(exist_s[0]) else "", key=f"s_{jour}")
             
         submit = st.form_submit_button("Enregistrer les menus")
         
         if submit:
             if config_ok:
+                # Préparation des nouvelles données à partir du dictionnaire de saisie
+                nouvelles_donnees = []
+                for jour in jours:
+                    nouvelles_donnees.append([sel_annee, sel_sem, jour, "Midi", dict_saisie[f"{jour}_Midi"]])
+                    nouvelles_donnees.append([sel_annee, sel_sem, jour, "Soir", dict_saisie[f"{jour}_Soir"]])
+                
                 df = load_data()
                 if not df.empty:
                     df = df[~((df['Annee'] == sel_annee) & (df['Semaine'] == sel_sem))]
                 new_df = pd.DataFrame(nouvelles_donnees, columns=COLUMNS)
                 df_final = pd.concat([df, new_df], ignore_index=True)
                 save_to_github(df_final)
+                # Petit rafraîchissement pour voir les changements
+                st.rerun()
             else:
-                st.error("Impossible d'enregistrer : la configuration GitHub est manquante dans les Secrets.")
+                st.error("Impossible d'enregistrer : la configuration GitHub est manquante.")
 
 # --- ONGLET 3 : HISTORIQUE ---
 with tab3:
