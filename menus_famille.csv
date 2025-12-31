@@ -13,20 +13,6 @@ Annee,Semaine,Jour,Moment,Menu
 2025,52,Samedi,Soir,"Mille-feuilles betterave, mozzarella et avocat, aspics"
 2025,52,Dimanche,Midi,Boulettes de viande et gratin dauphinois
 2025,52,Dimanche,Soir,Pâtes au thon et sauce tomate
-2026,1,Lundi,Midi,Sushis
-2026,1,Lundi,Soir,Diète ou repas rapide
-2026,1,Mardi,Midi,"Oeufs brouillés et poitrine fumées, carottes râpées."
-2026,1,Mardi,Soir,Fajitas
-2026,1,Mercredi,Midi,Truite grillée et riz complet
-2026,1,Mercredi,Soir,"Plateau de fruits de mer, tarte boudin noir et pomme"
-2026,1,Jeudi,Midi,Repas chez les Génot
-2026,1,Jeudi,Soir,
-2026,1,Vendredi,Midi,
-2026,1,Vendredi,Soir,Burger King
-2026,1,Samedi,Midi,Pièce du boucher (pilon pour B.) et frites
-2026,1,Samedi,Soir,"Tartines au fromage bleu, lardons et poire (HF)"
-2026,1,Dimanche,Midi,Petit salé aux lentilles
-2026,1,Dimanche,Soir,"La Méditerranéenne : penne, thon et olives (HF)"
 2026,2,Lundi,Midi,Petit salé aux lentilles
 2026,2,Lundi,Soir,Wok de nouilles boeuf haché et légumes sautés (HF)
 2026,2,Mardi,Midi,Macaronade
@@ -41,3 +27,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,2,Samedi,Soir,
 2026,2,Dimanche,Midi,
 2026,2,Dimanche,Soir,
+2026,1,Lundi,Midi,Sushis
+2026,1,Lundi,Soir,Diète ou repas rapide
+2026,1,Mardi,Midi,"Oeufs brouillés et poitrine fumées, carottes râpées."
+2026,1,Mardi,Soir,Fajitas
+2026,1,Mercredi,Midi,Truite grillée et riz complet
+2026,1,Mercredi,Soir,"Plateau de fruits de mer, tarte boudin noir et pomme"
+2026,1,Jeudi,Midi,Repas chez les Génot
+2026,1,Jeudi,Soir,
+2026,1,Vendredi,Midi,
+2026,1,Vendredi,Soir,Burger King
+2026,1,Samedi,Midi,Pièce du boucher (pilon pour B.) et frites
+2026,1,Samedi,Soir,"Tartines au fromage bleu, lardons et poire (HF)"
+2026,1,Dimanche,Midi,Petit salé aux lentilles
+2026,1,Dimanche,Soir,"La Méditerranéenne : penne, thon et olives (HF)"
