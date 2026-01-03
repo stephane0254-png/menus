@@ -13,20 +13,6 @@ Annee,Semaine,Jour,Moment,Menu
 2025,52,Samedi,Soir,"Mille-feuilles betterave, mozzarella et avocat, aspics"
 2025,52,Dimanche,Midi,Boulettes de viande et gratin dauphinois
 2025,52,Dimanche,Soir,Pâtes au thon et sauce tomate
-2026,2,Lundi,Midi,Petit salé aux lentilles
-2026,2,Lundi,Soir,Wok de nouilles boeuf haché et légumes sautés (HF)
-2026,2,Mardi,Midi,Macaronade
-2026,2,Mardi,Soir,Curry rouge de dinde et petits pois (HF)
-2026,2,Mercredi,Midi,(S) fondue de poireaux / (E + B) chili con carne (riz à cuire)
-2026,2,Mercredi,Soir,Linguine chorizo et crème à l’espagnole (HF)
-2026,2,Jeudi,Midi,Poulet teriyaki
-2026,2,Jeudi,Soir,"Penne au poulet doré, poireau et gouda (HF)"
-2026,2,Vendredi,Midi,"Saumon au four, riz et crème de brocolis"
-2026,2,Vendredi,Soir,
-2026,2,Samedi,Midi,
-2026,2,Samedi,Soir,
-2026,2,Dimanche,Midi,
-2026,2,Dimanche,Soir,
 2026,1,Lundi,Midi,Sushis
 2026,1,Lundi,Soir,Diète ou repas rapide
 2026,1,Mardi,Midi,"Oeufs brouillés et poitrine fumées, carottes râpées."
@@ -41,3 +27,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,1,Samedi,Soir,"Tartines au fromage bleu, lardons et poire (HF)"
 2026,1,Dimanche,Midi,Petit salé aux lentilles
 2026,1,Dimanche,Soir,"La Méditerranéenne : penne, thon et olives (HF)"
+2026,2,Lundi,Midi,Petit salé aux lentilles
+2026,2,Lundi,Soir,Wok de nouilles boeuf haché et légumes sautés (HF)
+2026,2,Mardi,Midi,Macaronade
+2026,2,Mardi,Soir,"Penne au poulet doré, poireau et gouda (HF)"
+2026,2,Mercredi,Midi,(S) fondue de poireaux / (E + B) chili con carne (riz à cuire)
+2026,2,Mercredi,Soir,Linguine chorizo et crème à l’espagnole (HF)
+2026,2,Jeudi,Midi,Poulet teriyaki
+2026,2,Jeudi,Soir,Curry rouge de dinde et petits pois (HF)
+2026,2,Vendredi,Midi,"Saumon au four, riz et crème de brocolis"
+2026,2,Vendredi,Soir,
+2026,2,Samedi,Midi,
+2026,2,Samedi,Soir,
+2026,2,Dimanche,Midi,
+2026,2,Dimanche,Soir,
