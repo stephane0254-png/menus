@@ -27,20 +27,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,1,Samedi,Soir,"Tartines au fromage bleu, lardons et poire (HF)"
 2026,1,Dimanche,Midi,Petit salé aux lentilles
 2026,1,Dimanche,Soir,"La Méditerranéenne : penne, thon et olives (HF)"
-2026,3,Lundi,Midi,Blanquette de veau et riz
-2026,3,Lundi,Soir,Rigatoni sauce au bleu (HF)
-2026,3,Mardi,Midi,
-2026,3,Mardi,Soir,
-2026,3,Mercredi,Midi,
-2026,3,Mercredi,Soir,
-2026,3,Jeudi,Midi,Relais des Chardons
-2026,3,Jeudi,Soir,
-2026,3,Vendredi,Midi,
-2026,3,Vendredi,Soir,
-2026,3,Samedi,Midi,
-2026,3,Samedi,Soir,
-2026,3,Dimanche,Midi,
-2026,3,Dimanche,Soir,
 2026,2,Lundi,Midi,Petit salé aux lentilles
 2026,2,Lundi,Soir,La Méditerranéenne (salade de pâtes) (HF)
 2026,2,Mardi,Midi,Macaronade
@@ -55,3 +41,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,2,Samedi,Soir,Apéritif pour anniversaire
 2026,2,Dimanche,Midi,Blanquette de veau et riz
 2026,2,Dimanche,Soir,Salade Top Chrono (poulet laqué à l’asiatique) (HF)
+2026,3,Lundi,Midi,Blanquette de veau et riz
+2026,3,Lundi,Soir,Rigatoni sauce au bleu (HF)
+2026,3,Mardi,Midi,
+2026,3,Mardi,Soir,Curry rouge façon thaï au lieu (HF)
+2026,3,Mercredi,Midi,
+2026,3,Mercredi,Soir,Wok de nouilles et dinde (HF)
+2026,3,Jeudi,Midi,Relais des Chardons
+2026,3,Jeudi,Soir,Schnitzel de porc (HF)
+2026,3,Vendredi,Midi,
+2026,3,Vendredi,Soir,Pâtes façon carbonara (HF)
+2026,3,Samedi,Midi,
+2026,3,Samedi,Soir,
+2026,3,Dimanche,Midi,
+2026,3,Dimanche,Soir,
