@@ -41,20 +41,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,2,Samedi,Soir,Apéritif pour anniversaire
 2026,2,Dimanche,Midi,Blanquette de veau et riz
 2026,2,Dimanche,Soir,Salade Top Chrono (poulet laqué à l’asiatique) (HF)
-2026,3,Lundi,Midi,Blanquette de veau et riz
-2026,3,Lundi,Soir,Rigatoni sauce au bleu (HF)
-2026,3,Mardi,Midi,(E) extérieur /(S) munstiflette
-2026,3,Mardi,Soir,Curry rouge façon thaï au lieu (HF)
-2026,3,Mercredi,Midi,Nouilles sautées au bœuf
-2026,3,Mercredi,Soir,Wok de nouilles et dinde (HF)
-2026,3,Jeudi,Midi,Relais des Chardons
-2026,3,Jeudi,Soir,Schnitzel de porc (HF)
-2026,3,Vendredi,Midi,Petit salé aux lentilles
-2026,3,Vendredi,Soir,Pâtes façon carbonara (HF)
-2026,3,Samedi,Midi,
-2026,3,Samedi,Soir,
-2026,3,Dimanche,Midi,
-2026,3,Dimanche,Soir,
 2026,4,Lundi,Midi,
 2026,4,Lundi,Soir,Wok de nouille et dinde (HF)
 2026,4,Mardi,Midi,
@@ -69,3 +55,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,4,Samedi,Soir,
 2026,4,Dimanche,Midi,
 2026,4,Dimanche,Soir,
+2026,3,Lundi,Midi,Blanquette de veau et riz
+2026,3,Lundi,Soir,Rigatoni sauce au bleu (HF)
+2026,3,Mardi,Midi,(E) extérieur /(S) munstiflette
+2026,3,Mardi,Soir,Curry rouge façon thaï au lieu (HF)
+2026,3,Mercredi,Midi,Nouilles sautées au bœuf
+2026,3,Mercredi,Soir,Schnotzel de porc (HF)
+2026,3,Jeudi,Midi,Relais des Chardons
+2026,3,Jeudi,Soir,Salade top chrono (HF)
+2026,3,Vendredi,Midi,Petit salé aux lentilles
+2026,3,Vendredi,Soir,Pâtes façon carbonara (HF)
+2026,3,Samedi,Midi,
+2026,3,Samedi,Soir,
+2026,3,Dimanche,Midi,
+2026,3,Dimanche,Soir,
