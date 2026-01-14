@@ -41,20 +41,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,2,Samedi,Soir,Apéritif pour anniversaire
 2026,2,Dimanche,Midi,Blanquette de veau et riz
 2026,2,Dimanche,Soir,Salade Top Chrono (poulet laqué à l’asiatique) (HF)
-2026,4,Lundi,Midi,
-2026,4,Lundi,Soir,Wok de nouille et dinde (HF)
-2026,4,Mardi,Midi,
-2026,4,Mardi,Soir,Pâtes façon carbonara (HF)
-2026,4,Mercredi,Midi,
-2026,4,Mercredi,Soir,
-2026,4,Jeudi,Midi,
-2026,4,Jeudi,Soir,
-2026,4,Vendredi,Midi,
-2026,4,Vendredi,Soir,
-2026,4,Samedi,Midi,
-2026,4,Samedi,Soir,
-2026,4,Dimanche,Midi,
-2026,4,Dimanche,Soir,
 2026,3,Lundi,Midi,Blanquette de veau et riz
 2026,3,Lundi,Soir, Curry rouge façon thaï au lieu (HF)
 2026,3,Mardi,Midi,(E) extérieur /(S) curry rouge façon thaï au lieu (HF)
@@ -69,3 +55,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,3,Samedi,Soir,
 2026,3,Dimanche,Midi,Repas chez les Masson
 2026,3,Dimanche,Soir,"Repas débrouille (pâtes, soupe…)"
+2026,4,Lundi,Midi,
+2026,4,Lundi,Soir,Wok de nouille et dinde (HF)
+2026,4,Mardi,Midi,
+2026,4,Mardi,Soir,Pâtes façon carbonara (HF)
+2026,4,Mercredi,Midi,
+2026,4,Mercredi,Soir,Repas chinois
+2026,4,Jeudi,Midi,
+2026,4,Jeudi,Soir,
+2026,4,Vendredi,Midi,
+2026,4,Vendredi,Soir,
+2026,4,Samedi,Midi,
+2026,4,Samedi,Soir,
+2026,4,Dimanche,Midi,
+2026,4,Dimanche,Soir,
