@@ -41,20 +41,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,2,Samedi,Soir,Apéritif pour anniversaire
 2026,2,Dimanche,Midi,Blanquette de veau et riz
 2026,2,Dimanche,Soir,Salade Top Chrono (poulet laqué à l’asiatique) (HF)
-2026,4,Lundi,Midi,Petit salé aux lentilles
-2026,4,Lundi,Soir,Wok de nouille et dinde (HF)
-2026,4,Mardi,Midi,Blanquette de veau (cuire du riz)
-2026,4,Mardi,Soir,Pâtes façon carbonara (HF)
-2026,4,Mercredi,Midi,(E + S) Curry rouge de dinde et riz / (B) boulette party
-2026,4,Mercredi,Soir,Repas chinois
-2026,4,Jeudi,Midi,Nouilles sautées au boeuf
-2026,4,Jeudi,Soir,Conserves de poisson et riz (en cuire plus pour le lendemain)
-2026,4,Vendredi,Midi,"Saumon au four, crème de brocolis et riz"
-2026,4,Vendredi,Soir,
-2026,4,Samedi,Midi,
-2026,4,Samedi,Soir,
-2026,4,Dimanche,Midi,
-2026,4,Dimanche,Soir,
 2026,3,Lundi,Midi,Blanquette de veau et riz
 2026,3,Lundi,Soir, Curry rouge façon thaï au lieu (HF)
 2026,3,Mardi,Midi,(E) extérieur /(S) curry rouge façon thaï au lieu (HF)
@@ -69,3 +55,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,3,Samedi,Soir,Repas à Nancy
 2026,3,Dimanche,Midi,Repas chez les Masson
 2026,3,Dimanche,Soir,"Repas débrouille (pâtes, soupe…)"
+2026,4,Lundi,Midi,Petit salé aux lentilles
+2026,4,Lundi,Soir,Wok de nouille et dinde (HF)
+2026,4,Mardi,Midi,Blanquette de veau (cuire du riz)
+2026,4,Mardi,Soir,Pâtes façon carbonara (HF)
+2026,4,Mercredi,Midi,(E + S) Curry rouge de dinde et riz / (B) boulette party
+2026,4,Mercredi,Soir,Repas chinois
+2026,4,Jeudi,Midi,Nouilles sautées au boeuf
+2026,4,Jeudi,Soir,Conserves de poisson et riz (en cuire plus pour le lendemain)
+2026,4,Vendredi,Midi,"Saumon au four, crème de brocolis et riz"
+2026,4,Vendredi,Soir,
+2026,4,Samedi,Midi,Faux-filet et frites (haut de cuisse pour B.)
+2026,4,Samedi,Soir,
+2026,4,Dimanche,Midi,Raclette
+2026,4,Dimanche,Soir,Diète ou soupe chinoise
