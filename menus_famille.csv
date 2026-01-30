@@ -69,20 +69,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,4,Samedi,Soir,"Tartine guacamole, crevette et mozzarella"
 2026,4,Dimanche,Midi,Raclette
 2026,4,Dimanche,Soir,Soupe de potiron
-2026,5,Lundi,Midi,Nouilles sautées au bœuf
-2026,5,Lundi,Soir,Burrito bowl tex-mex (HF)
-2026,5,Mardi,Midi,Galette DDPP
-2026,5,Mardi,Soir,Restes
-2026,5,Mercredi,Midi,"(S) Penne au poulet doré, poireaux et gouda / (B) colin pané et riz / (E) riz cantonais"
-2026,5,Mercredi,Soir,Tikka bowl express (HF)
-2026,5,Jeudi,Midi,Blanquette de veau (cuire du riz)
-2026,5,Jeudi,Soir,Conchiglie pesto rosso (HF)
-2026,5,Vendredi,Midi,"Filet de cabillaud, légumes quinoa"
-2026,5,Vendredi,Soir,Taquitos porc haché (HF)
-2026,5,Samedi,Midi,"Canard grillé, sauce échalote et purée de carotte (HF)"
-2026,5,Samedi,Soir,Galette bretonne (HF)
-2026,5,Dimanche,Midi,Bœuf carottes et pommes de terre
-2026,5,Dimanche,Soir,"Udon au poulet, pak choï (HF)"
 2026,6,Lundi,Midi,Bœuf carottes et pommes de terre
 2026,6,Lundi,Soir,"Galettes chèvre, lardons et oignons"
 2026,6,Mardi,Midi,Lieu pané au pesto (HF)
@@ -97,3 +83,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,6,Samedi,Soir,Chandeleur
 2026,6,Dimanche,Midi,
 2026,6,Dimanche,Soir,
+2026,5,Lundi,Midi,Nouilles sautées au bœuf
+2026,5,Lundi,Soir,Burrito bowl tex-mex (HF)
+2026,5,Mardi,Midi,Galette DDPP
+2026,5,Mardi,Soir,Restes
+2026,5,Mercredi,Midi,"(S) Penne au poulet doré, poireaux et gouda / (B) colin pané et riz / (E) riz cantonais"
+2026,5,Mercredi,Soir,Tikka bowl express (HF)
+2026,5,Jeudi,Midi,Blanquette de veau (cuire du riz)
+2026,5,Jeudi,Soir,Conchiglie pesto rosso (HF)
+2026,5,Vendredi,Midi,Tikka bowl (E) Conchigli pesto(S)
+2026,5,Vendredi,Soir,Taquitos porc haché (HF)
+2026,5,Samedi,Midi,"Canard grillé, sauce échalote et purée de carotte (HF)"
+2026,5,Samedi,Soir,Galette bretonne (HF)
+2026,5,Dimanche,Midi,Bœuf carottes et pommes de terre
+2026,5,Dimanche,Soir,"Udon au poulet, pak choï (HF)"
