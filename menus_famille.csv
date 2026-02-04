@@ -69,20 +69,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,4,Samedi,Soir,"Tartine guacamole, crevette et mozzarella"
 2026,4,Dimanche,Midi,Raclette
 2026,4,Dimanche,Soir,Soupe de potiron
-2026,6,Lundi,Midi,Bœuf carottes et pommes de terre
-2026,6,Lundi,Soir,"Galettes chèvre, lardons et oignons"
-2026,6,Mardi,Midi,Lieu pané au pesto (HF)
-2026,6,Mardi,Soir,Bun’s et aubergines confites
-2026,6,Mercredi,Midi,Poulet à la crème de poireaux (HF)
-2026,6,Mercredi,Soir,Soupe de nouilles au porc et pak choï (HF)
-2026,6,Jeudi,Midi,(E) extérieur / (S)
-2026,6,Jeudi,Soir,Pâtes aux crevettes et courgettes grillées
-2026,6,Vendredi,Midi,Rigatoni pesto verde (HF)
-2026,6,Vendredi,Soir,Chipotle bowl (HF)
-2026,6,Samedi,Midi,Steak tartare et frites (poulet pour B)
-2026,6,Samedi,Soir,Chandeleur
-2026,6,Dimanche,Midi,
-2026,6,Dimanche,Soir,
 2026,5,Lundi,Midi,Nouilles sautées au bœuf
 2026,5,Lundi,Soir,Burrito bowl tex-mex (HF)
 2026,5,Mardi,Midi,Galette DDPP
@@ -97,3 +83,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,5,Samedi,Soir,Galette bretonne (HF)
 2026,5,Dimanche,Midi,Bœuf carottes et pommes de terre
 2026,5,Dimanche,Soir,"Udon au poulet, pak choï (HF)"
+2026,6,Lundi,Midi,Bœuf carottes et pommes de terre
+2026,6,Lundi,Soir,"Galettes chèvre, lardons et oignons"
+2026,6,Mardi,Midi,Lieu pané au pesto (HF)
+2026,6,Mardi,Soir,Bun’s et aubergines confites
+2026,6,Mercredi,Midi,Poulet à la crème de poireaux (HF)
+2026,6,Mercredi,Soir,Soupe de nouilles au porc et pak choï (HF)
+2026,6,Jeudi,Midi,(E) extérieur / (S) gamelle
+2026,6,Jeudi,Soir,Pâtes aux crevettes et courgettes grillées
+2026,6,Vendredi,Midi,Rigatoni pesto verde (HF)
+2026,6,Vendredi,Soir,Chipotle bowl (HF)
+2026,6,Samedi,Midi,Steak tartare et frites (poulet pour B)
+2026,6,Samedi,Soir,Chandeleur
+2026,6,Dimanche,Midi,
+2026,6,Dimanche,Soir,
