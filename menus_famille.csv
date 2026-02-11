@@ -97,20 +97,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,6,Samedi,Soir,Chandeleur
 2026,6,Dimanche,Midi,"Truffade, saucisse et salade"
 2026,6,Dimanche,Soir,Pizza naan (HF)
-2026,7,Lundi,Midi,Truffade et saucisse
-2026,7,Lundi,Soir,"Lieu papillote, mayonnaise et légumes rôtis (HF)"
-2026,7,Mardi,Midi,(E) collecte / (S) gamelle
-2026,7,Mardi,Soir,Pizza naan au pesto et au jambon
-2026,7,Mercredi,Midi,Wok au poulet coco (HF)
-2026,7,Mercredi,Soir,Risotto fondant d’amour (HF)
-2026,7,Jeudi,Midi,(E) Châlons / (S) gamelle
-2026,7,Jeudi,Soir,Repas chinois
-2026,7,Vendredi,Midi,Aiguillettes de poulet façon teriyaki (HF)
-2026,7,Vendredi,Soir,Rigatoni bacon (HF)
-2026,7,Samedi,Midi,Magret de canard (poulet pour B.) et frites
-2026,7,Samedi,Soir,Toastadas tex-mex (HF)
-2026,7,Dimanche,Midi,
-2026,7,Dimanche,Soir,
 2026,8,Lundi,Midi,Extérieur
 2026,8,Lundi,Soir,
 2026,8,Mardi,Midi,Lieu express et semoule (HF)
@@ -125,3 +111,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,8,Samedi,Soir,
 2026,8,Dimanche,Midi,
 2026,8,Dimanche,Soir,
+2026,7,Lundi,Midi,Truffade et saucisse
+2026,7,Lundi,Soir,"Lieu papillote, mayonnaise et légumes rôtis (HF)"
+2026,7,Mardi,Midi,(E) collecte / (S) gamelle
+2026,7,Mardi,Soir,Pizza naan au pesto et au jambon
+2026,7,Mercredi,Midi,Wok au poulet coco (HF)
+2026,7,Mercredi,Soir,Risotto fondant d’amour (HF)
+2026,7,Jeudi,Midi,(E) Châlons / (S) gamelle
+2026,7,Jeudi,Soir,Repas chinois
+2026,7,Vendredi,Midi,Aiguillettes de poulet façon teriyaki (HF)
+2026,7,Vendredi,Soir,Rigatoni bacon (HF)
+2026,7,Samedi,Midi,Magret de canard (poulet pour B.) et frites
+2026,7,Samedi,Soir,Toastadas tex-mex (HF)
+2026,7,Dimanche,Midi,
+2026,7,Dimanche,Soir,Poulet au curry (HF)
