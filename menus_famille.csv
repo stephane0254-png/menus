@@ -111,20 +111,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,7,Samedi,Soir,Toastadas tex-mex (HF)
 2026,7,Dimanche,Midi,Hachis parmentier
 2026,7,Dimanche,Soir,Poulet au curry (HF)
-2026,9,Lundi,Midi,Nancy
-2026,9,Lundi,Soir,Conserve de poisson et riz
-2026,9,Mardi,Midi,Filet de cabillaud et gratin de légumes
-2026,9,Mardi,Soir,Nouilles soba crémeuses aux crevettes (HF)
-2026,9,Mercredi,Midi,Blanquette de poulet et riz pilaf (HF)
-2026,9,Mercredi,Soir,Nouilles au bœuf haché (HF)
-2026,9,Jeudi,Midi,Restaurant
-2026,9,Jeudi,Soir,
-2026,9,Vendredi,Midi,
-2026,9,Vendredi,Soir,
-2026,9,Samedi,Midi,
-2026,9,Samedi,Soir,
-2026,9,Dimanche,Midi,
-2026,9,Dimanche,Soir,
 2026,8,Lundi,Midi,Hachis parmentier
 2026,8,Lundi,Soir,Tarte bœuf cheddar et gratin de légumes
 2026,8,Mardi,Midi,Lieu express et semoule (HF)
@@ -139,3 +125,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,8,Samedi,Soir,Nancy
 2026,8,Dimanche,Midi,Nancy
 2026,8,Dimanche,Soir,Nancy
+2026,9,Lundi,Midi,Nancy
+2026,9,Lundi,Soir,Conserve de poisson et riz
+2026,9,Mardi,Midi,Filet de cabillaud et gratin de légumes
+2026,9,Mardi,Soir,Nouilles soba crémeuses aux crevettes (HF)
+2026,9,Mercredi,Midi,Blanquette de poulet et riz pilaf (HF)
+2026,9,Mercredi,Soir,Nouilles au bœuf haché (HF)
+2026,9,Jeudi,Midi,Restaurant
+2026,9,Jeudi,Soir,
+2026,9,Vendredi,Midi,"Paupiettes de veau, sauce tomate et riz"
+2026,9,Vendredi,Soir,
+2026,9,Samedi,Midi,
+2026,9,Samedi,Soir,
+2026,9,Dimanche,Midi,
+2026,9,Dimanche,Soir,
