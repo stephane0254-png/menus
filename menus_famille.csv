@@ -125,20 +125,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,8,Samedi,Soir,Nems et samoussas
 2026,8,Dimanche,Midi,Couscous
 2026,8,Dimanche,Soir,Restes
-2026,10,Lundi,Midi,Sushis
-2026,10,Lundi,Soir,
-2026,10,Mardi,Midi,Gamelles
-2026,10,Mardi,Soir,Pâté en croûte et aubergines confites
-2026,10,Mercredi,Midi,
-2026,10,Mercredi,Soir,
-2026,10,Jeudi,Midi,Extérieur
-2026,10,Jeudi,Soir,
-2026,10,Vendredi,Midi,
-2026,10,Vendredi,Soir,
-2026,10,Samedi,Midi,
-2026,10,Samedi,Soir,
-2026,10,Dimanche,Midi,
-2026,10,Dimanche,Soir,
 2026,9,Lundi,Midi,"Noix de Saint-Jacques, poireaux à la crème et semoule"
 2026,9,Lundi,Soir,Conserve de poisson et riz
 2026,9,Mardi,Midi,Filet de cabillaud et gratin de légumes
@@ -153,3 +139,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,9,Samedi,Soir,Gratin de pâtes au rôti de porc et mozzarella
 2026,9,Dimanche,Midi,Raclette
 2026,9,Dimanche,Soir,Diète / conserve de poisson et pâtes / soupe chinoise
+2026,10,Lundi,Midi,Sushis
+2026,10,Lundi,Soir,Pâté en croûte et aubergines confites
+2026,10,Mardi,Midi,Gamelles
+2026,10,Mardi,Soir,
+2026,10,Mercredi,Midi,
+2026,10,Mercredi,Soir,
+2026,10,Jeudi,Midi,Extérieur
+2026,10,Jeudi,Soir,
+2026,10,Vendredi,Midi,
+2026,10,Vendredi,Soir,
+2026,10,Samedi,Midi,
+2026,10,Samedi,Soir,
+2026,10,Dimanche,Midi,
+2026,10,Dimanche,Soir,
