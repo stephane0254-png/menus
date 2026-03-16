@@ -6,7 +6,7 @@ from github import Github
 import io
 
 # Configuration de la page
-st.set_page_config(page_title="Menus de la Famille", layout="wide")
+st.set_page_config(page_title="Menus", layout="wide")
 
 # Initialisation sécurisée des secrets
 try:
