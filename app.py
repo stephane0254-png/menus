@@ -56,7 +56,7 @@ def get_date_for_day(annee, semaine, jour_nom):
         return "??"
 
 # --- INTERFACE ---
-st.title("🍴 Planning des Menus Familiaux")
+st.title("🍴 Menus")
 
 tab1, tab2, tab3 = st.tabs(["📅 Semaines à venir", "📝 Saisir / Modifier", "📜 Historique"])
 
