@@ -153,20 +153,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,10,Samedi,Soir,Linguine chorizo et crème (HF)
 2026,10,Dimanche,Midi,"Tajine d’agneau, légumes et semoule"
 2026,10,Dimanche,Soir,"Knacks et saucisse fumée, poêlée à la sarladaise"
-2026,12,Lundi,Midi,Gamelles
-2026,12,Lundi,Soir,Rigatoni crémeux au thon (HF)
-2026,12,Mardi,Midi,Gamelles
-2026,12,Mardi,Soir,"Bruschettas Saint-Moret, oignons et lardons"
-2026,12,Mercredi,Midi,Chipotle bowl (HF)
-2026,12,Mercredi,Soir,Rigatoni crémeux au thon (HF)
-2026,12,Jeudi,Midi,Gamelles
-2026,12,Jeudi,Soir,Poké bowl au poulet (HF)
-2026,12,Vendredi,Midi,Gamelles
-2026,12,Vendredi,Soir,
-2026,12,Samedi,Midi,
-2026,12,Samedi,Soir,
-2026,12,Dimanche,Midi,
-2026,12,Dimanche,Soir,
 2026,11,Lundi,Midi,"Tajine d’agneau, légumes et semoule"
 2026,11,Lundi,Soir,Risotto cantal et lardons (HF)
 2026,11,Mardi,Midi,Extérieur
@@ -181,3 +167,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,11,Samedi,Soir,Saumon et poêlée fermière
 2026,11,Dimanche,Midi,"Cuisses de canard, pommes de terre à la sarladaise"
 2026,11,Dimanche,Soir,Pâtes et poisson en boite
+2026,12,Lundi,Midi,Gamelles
+2026,12,Lundi,Soir,Rigatoni crémeux au thon (HF)
+2026,12,Mardi,Midi,Gamelles
+2026,12,Mardi,Soir,"Bruschettas Saint-Moret, oignons et lardons"
+2026,12,Mercredi,Midi,
+2026,12,Mercredi,Soir,Rigatoni crémeux au thon (HF)
+2026,12,Jeudi,Midi,Gamelles
+2026,12,Jeudi,Soir,Poké bowl au poulet (HF)
+2026,12,Vendredi,Midi,Gamelles
+2026,12,Vendredi,Soir,Chipotle bowl (HF)
+2026,12,Samedi,Midi,
+2026,12,Samedi,Soir,
+2026,12,Dimanche,Midi,
+2026,12,Dimanche,Soir,
