@@ -181,20 +181,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,12,Samedi,Soir,Raviolis sauce tomate
 2026,12,Dimanche,Midi,Gratin dauphinois et saucisses
 2026,12,Dimanche,Soir,Salades composées et saucisson
-2026,14,Lundi,Midi,Gamelles
-2026,14,Lundi,Soir,Lieu poêlé et lentilles au curry (HF)
-2026,14,Mardi,Midi,(E) extérieur / (S) gamelle
-2026,14,Mardi,Soir,"Saucisse fumée et knacks, pâtes"
-2026,14,Mercredi,Midi,Filet de lieu et grenailles rôties (HF)
-2026,14,Mercredi,Soir,Rigatoni terre-mer (HF)
-2026,14,Jeudi,Midi,Gamelles
-2026,14,Jeudi,Soir,Porc grillé et sauce persil (HF)
-2026,14,Vendredi,Midi,Gamelles
-2026,14,Vendredi,Soir,
-2026,14,Samedi,Midi,
-2026,14,Samedi,Soir,
-2026,14,Dimanche,Midi,Utiliser foie gras et saumon ? 
-2026,14,Dimanche,Soir,
 2026,13,Lundi,Midi,(S) Gamelle / (E) Reims
 2026,13,Lundi,Soir,Bowl énergie aux crevettes (HF)
 2026,13,Mardi,Midi,Gamelles
@@ -209,3 +195,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,13,Samedi,Soir,Conserve de poisson et riz
 2026,13,Dimanche,Midi,Pizzas
 2026,13,Dimanche,Soir,Soupe chinoise
+2026,14,Lundi,Midi,Gamelles
+2026,14,Lundi,Soir,Lieu poêlé et lentilles au curry (HF)
+2026,14,Mardi,Midi,(E) extérieur / (S) gamelle
+2026,14,Mardi,Soir,"Saucisse fumée et knacks, pâtes"
+2026,14,Mercredi,Midi,Filet de lieu et grenailles rôties (HF)
+2026,14,Mercredi,Soir,Rigatoni terre-mer (HF)
+2026,14,Jeudi,Midi,Gamelles
+2026,14,Jeudi,Soir,Porc grillé et sauce persil (HF)
+2026,14,Vendredi,Midi,Gamelles
+2026,14,Vendredi,Soir,
+2026,14,Samedi,Midi,
+2026,14,Samedi,Soir,Chicon au gratin
+2026,14,Dimanche,Midi,Utiliser foie gras et saumon ? 
+2026,14,Dimanche,Soir,
