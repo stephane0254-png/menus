@@ -195,20 +195,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,13,Samedi,Soir,Conserve de poisson et riz
 2026,13,Dimanche,Midi,Pizzas
 2026,13,Dimanche,Soir,Soupe chinoise
-2026,14,Lundi,Midi,Gamelles
-2026,14,Lundi,Soir,Lieu poêlé et lentilles au curry (HF)
-2026,14,Mardi,Midi,(E) extérieur / (S) gamelle
-2026,14,Mardi,Soir,"Saucisse fumée et knacks, pâtes"
-2026,14,Mercredi,Midi,Filet de lieu et grenailles rôties (HF)
-2026,14,Mercredi,Soir,Rigatoni terre-mer (HF)
-2026,14,Jeudi,Midi,Gamelles
-2026,14,Jeudi,Soir,Porc grillé et sauce persil (HF)
-2026,14,Vendredi,Midi,Gamelles
-2026,14,Vendredi,Soir,"Saumon, semoule et poêlée de légumes"
-2026,14,Samedi,Midi,Steak tartare et frites
-2026,14,Samedi,Soir,Chicons en gratin
-2026,14,Dimanche,Midi,"Brioche toastée et foie gras poêlé / Gigot d’agneau, pommes de terre grenailles et flageolets"
-2026,14,Dimanche,Soir,"Tartines de pâté, potage de légumes"
 2026,15,Lundi,Midi,"Lieu express, semoule et pesto rosso (HF)"
 2026,15,Lundi,Soir,"Coquillettes, brunoise de légumes et fruits de mer"
 2026,15,Mardi,Midi,(I + P + S) Gamelles / (E) extérieur
@@ -223,3 +209,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,15,Samedi,Soir,
 2026,15,Dimanche,Midi,
 2026,15,Dimanche,Soir,
+2026,14,Lundi,Midi,Gamelles
+2026,14,Lundi,Soir,Lieu poêlé et lentilles au curry (HF)
+2026,14,Mardi,Midi,(E) extérieur / (S) gamelle
+2026,14,Mardi,Soir,"Saucisse fumée et knacks, pâtes"
+2026,14,Mercredi,Midi,Filet de lieu et grenailles rôties (HF)
+2026,14,Mercredi,Soir,Rigatoni terre-mer (HF)
+2026,14,Jeudi,Midi,Gamelles
+2026,14,Jeudi,Soir,Porc grillé et sauce persil (HF)
+2026,14,Vendredi,Midi,Gamelles
+2026,14,Vendredi,Soir,"Saumon, semoule et carottes laquées"
+2026,14,Samedi,Midi,Steak tartare et frites
+2026,14,Samedi,Soir,Chicons en gratin
+2026,14,Dimanche,Midi,"Brioche toastée et foie gras poêlé / Gigot d’agneau, pommes de terre grenailles et flageolets"
+2026,14,Dimanche,Soir,"Tartines de pâté, potage de légumes"
