@@ -223,20 +223,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,15,Samedi,Soir,Salade piémontaise
 2026,15,Dimanche,Midi,Mijoté de porc à la mexicaine (HF)
 2026,15,Dimanche,Soir,Raviolis
-2026,16,Lundi,Midi,Burger King
-2026,16,Lundi,Soir,"Galette chèvre lardon, betteraves et tomates cerises"
-2026,16,Mardi,Midi,Pizza
-2026,16,Mardi,Soir,Soupe de légumes
-2026,16,Mercredi,Midi,"Saumon, haricots verts et pommes de terre vapeur"
-2026,16,Mercredi,Soir,Apéritif
-2026,16,Jeudi,Midi,Restaurant Reims
-2026,16,Jeudi,Soir,
-2026,16,Vendredi,Midi,Sandwichs
-2026,16,Vendredi,Soir,Restaurant japonais
-2026,16,Samedi,Midi,Restaurant
-2026,16,Samedi,Soir,
-2026,16,Dimanche,Midi,
-2026,16,Dimanche,Soir,
 2026,17,Lundi,Midi,Gamelles
 2026,17,Lundi,Soir,Soupe de légumes
 2026,17,Mardi,Midi,Gamelles
@@ -251,3 +237,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,17,Samedi,Soir,
 2026,17,Dimanche,Midi,
 2026,17,Dimanche,Soir,
+2026,16,Lundi,Midi,Burger King
+2026,16,Lundi,Soir,"Galette chèvre lardon, betteraves et tomates cerises"
+2026,16,Mardi,Midi,Pizza
+2026,16,Mardi,Soir,Soupe de légumes
+2026,16,Mercredi,Midi,"Saumon, haricots verts et pommes de terre vapeur"
+2026,16,Mercredi,Soir,Apéritif
+2026,16,Jeudi,Midi,Restaurant Reims
+2026,16,Jeudi,Soir,
+2026,16,Vendredi,Midi,Sandwichs
+2026,16,Vendredi,Soir,Restaurant japonais
+2026,16,Samedi,Midi,Restaurant
+2026,16,Samedi,Soir,
+2026,16,Dimanche,Midi,
+2026,16,Dimanche,Soir,Soupe chinoise
