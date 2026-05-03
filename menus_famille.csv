@@ -251,20 +251,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,17,Samedi,Soir,Salade de riz au saumon fumé
 2026,17,Dimanche,Midi,Restaurant
 2026,17,Dimanche,Soir,Pâtes au ketchup et knackis
-2026,19,Lundi,Midi,Gamelles
-2026,19,Lundi,Soir,Curry rouge de dinde et petits pois (HF)
-2026,19,Mardi,Midi,Gamelles
-2026,19,Mardi,Soir,Oeufs brouillés et aubergines confites
-2026,19,Mercredi,Midi,Linguines printanières lardons et asperges (HF)
-2026,19,Mercredi,Soir,Filets de limande et mini gratins de légumes
-2026,19,Jeudi,Midi,"Légumes du soleil braisés et semoule (HF), boulettes à l’italienne"
-2026,19,Jeudi,Soir,Saumon pané et nouilles aux légumes
-2026,19,Vendredi,Midi,"Maquereau au four, riz à l’espagnole"
-2026,19,Vendredi,Soir,
-2026,19,Samedi,Midi,
-2026,19,Samedi,Soir,
-2026,19,Dimanche,Midi,
-2026,19,Dimanche,Soir,
 2026,18,Lundi,Midi,Gamelles
 2026,18,Lundi,Soir,Feuilletés du boucher et salades composées
 2026,18,Mardi,Midi,"Gigot d’agneau, pommes grenailles et flageolets"
@@ -279,3 +265,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,18,Samedi,Soir,Asperges et crudités
 2026,18,Dimanche,Midi,"Boulgour façon pilaf, chèvre frais et courgette (HF)"
 2026,18,Dimanche,Soir,Knacks et pâtes au ketchup
+2026,19,Lundi,Midi,Gamelles
+2026,19,Lundi,Soir,Saumon grillé en croûte de sésame (HF)
+2026,19,Mardi,Midi,Gamelles
+2026,19,Mardi,Soir,Curry rouge de dinde et petits pois (HF)
+2026,19,Mercredi,Midi,Linguines printanières lardons et asperges (HF)
+2026,19,Mercredi,Soir,Oeufs brouillés et aubergines confites
+2026,19,Jeudi,Midi,Sushis
+2026,19,Jeudi,Soir,Filets de limande et mini gratins de légumes
+2026,19,Vendredi,Midi,"Légumes du soleil braisés et semoule (HF), boulettes à l’italienne"
+2026,19,Vendredi,Soir,"Maquereau au four, riz à l’espagnole"
+2026,19,Samedi,Midi,
+2026,19,Samedi,Soir,Saumon pané et nouilles aux légumes
+2026,19,Dimanche,Midi,
+2026,19,Dimanche,Soir,
