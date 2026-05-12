@@ -265,20 +265,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,18,Samedi,Soir,Asperges et crudités
 2026,18,Dimanche,Midi,"Boulgour façon pilaf, chèvre frais et courgette (HF)"
 2026,18,Dimanche,Soir,Knacks et pâtes au ketchup
-2026,20,Lundi,Midi,Gamelles
-2026,20,Lundi,Soir,Burger King
-2026,20,Mardi,Midi,Gamelles
-2026,20,Mardi,Soir,Repas chinois
-2026,20,Mercredi,Midi,Arroz attollado au chorizo et à l’avocat (HF)
-2026,20,Mercredi,Soir,Pâtes sauce bœuf carottes et boulettes de bœuf
-2026,20,Jeudi,Midi,Penne au poulet doré et poireaux (HF)
-2026,20,Jeudi,Soir,Flammekueche et salade tomates/avocat
-2026,20,Vendredi,Midi,Repas chez Nadège
-2026,20,Vendredi,Soir,Repas chez Nadège
-2026,20,Samedi,Midi,Restaurant anniversaire Stéphane
-2026,20,Samedi,Soir,
-2026,20,Dimanche,Midi,
-2026,20,Dimanche,Soir,
 2026,19,Lundi,Midi,Gamelles
 2026,19,Lundi,Soir,"Légumes du soleil braisés et semoule (HF),  boulettes à l’italienne"
 2026,19,Mardi,Midi,Gamelles
@@ -293,3 +279,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,19,Samedi,Soir,Saumon pané et nouilles aux légumes
 2026,19,Dimanche,Midi,Poké bowl (HF)
 2026,19,Dimanche,Soir,Courgettes dorées et labneh (HF)
+2026,20,Lundi,Midi,Gamelles
+2026,20,Lundi,Soir,Burger King
+2026,20,Mardi,Midi,Gamelles
+2026,20,Mardi,Soir,Repas chinois
+2026,20,Mercredi,Midi,Penne au poulet doré et poireaux (HF)
+2026,20,Mercredi,Soir,Pâtes sauce bœuf carottes et boulettes de bœuf
+2026,20,Jeudi,Midi,Arroz attollado au chorizo et à l’avocat (HF)
+2026,20,Jeudi,Soir,Flammekueche et salade tomates/avocat
+2026,20,Vendredi,Midi,Repas chez Nadège
+2026,20,Vendredi,Soir,Repas chez Nadège
+2026,20,Samedi,Midi,Restaurant anniversaire Stéphane
+2026,20,Samedi,Soir,Repas chez Nadège
+2026,20,Dimanche,Midi,Repas chez Nadège
+2026,20,Dimanche,Soir,
