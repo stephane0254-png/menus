@@ -295,13 +295,13 @@ Annee,Semaine,Jour,Moment,Menu
 2026,20,Dimanche,Soir,"Pâtes, haricots verts et jambon"
 2026,21,Lundi,Midi,Extérieur
 2026,21,Lundi,Soir,"Riz, poivrons et saumon pané"
-2026,21,Mardi,Midi,(E) Extérieur / (S) 
-2026,21,Mardi,Soir,"Pommes de terre grenaille, aubergines confites et filet de maquereau"
-2026,21,Mercredi,Midi,
+2026,21,Mardi,Midi,(E) Extérieur / (S) Gamelle
+2026,21,Mardi,Soir,
+2026,21,Mercredi,Midi,"Pommes de terre grenaille, aubergines confites et filet de maquereau"
 2026,21,Mercredi,Soir,
 2026,21,Jeudi,Midi,Gamelles
 2026,21,Jeudi,Soir,
-2026,21,Vendredi,Midi,(E) Extérieur / (S) 
+2026,21,Vendredi,Midi,(E) Extérieur / (S) gamelle
 2026,21,Vendredi,Soir,
 2026,21,Samedi,Midi,
 2026,21,Samedi,Soir,
