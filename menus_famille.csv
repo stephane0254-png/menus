@@ -293,20 +293,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,20,Samedi,Soir,Restes
 2026,20,Dimanche,Midi,"Roulé de pommes de terre au jambon et au fromage à tartiflette, salade de tomates"
 2026,20,Dimanche,Soir,Pain de viande et grenailles
-2026,21,Lundi,Midi,Extérieur
-2026,21,Lundi,Soir,Brandade de morue
-2026,21,Mardi,Midi,(E) Extérieur / (S) Gamelle
-2026,21,Mardi,Soir,Pizzas
-2026,21,Mercredi,Midi,"Pommes de terre grenaille, aubergines confites et filet de maquereau"
-2026,21,Mercredi,Soir,"Riz, poivrons et saumon pané"
-2026,21,Jeudi,Midi,Gamelles
-2026,21,Jeudi,Soir,"Gnocchis, brunoise à la méditerranéenne et dés de poulet"
-2026,21,Vendredi,Midi,(E) Extérieur / (S) gamelle
-2026,21,Vendredi,Soir,Salade de pâtes
-2026,21,Samedi,Midi,Faux-filet / tournedos et frites
-2026,21,Samedi,Soir,Lieu en papillotes (HF)
-2026,21,Dimanche,Midi,"Brochettes, semoule et légumes à couscous"
-2026,21,Dimanche,Soir,Crevettes en persillade (HF)
 2026,22,Lundi,Midi,Andouillettes sauce Maroilles et tagliatelles
 2026,22,Lundi,Soir,
 2026,22,Mardi,Midi,"Brochettes, semoule et légumes à couscous"
@@ -321,3 +307,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,22,Samedi,Soir,
 2026,22,Dimanche,Midi,
 2026,22,Dimanche,Soir,
+2026,21,Lundi,Midi,Extérieur
+2026,21,Lundi,Soir,Brandade de morue
+2026,21,Mardi,Midi,(E) Extérieur / (S) Gamelle
+2026,21,Mardi,Soir,Pizzas
+2026,21,Mercredi,Midi,"Pommes de terre grenaille, aubergines confites et filet de maquereau"
+2026,21,Mercredi,Soir,Riz à l’espagnole et saumon pané
+2026,21,Jeudi,Midi,Gamelles
+2026,21,Jeudi,Soir,"Gnocchis, brunoise à la méditerranéenne et dés de poulet"
+2026,21,Vendredi,Midi,(E) Extérieur / (S) gamelle
+2026,21,Vendredi,Soir,Salade de pâtes
+2026,21,Samedi,Midi,Faux-filet / tournedos et frites
+2026,21,Samedi,Soir,Lieu en papillotes (HF)
+2026,21,Dimanche,Midi,"Brochettes, semoule et légumes à couscous"
+2026,21,Dimanche,Soir,Crevettes en persillade (HF)
