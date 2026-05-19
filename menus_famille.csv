@@ -293,20 +293,6 @@ Annee,Semaine,Jour,Moment,Menu
 2026,20,Samedi,Soir,Restes
 2026,20,Dimanche,Midi,"Roulé de pommes de terre au jambon et au fromage à tartiflette, salade de tomates"
 2026,20,Dimanche,Soir,Pain de viande et grenailles
-2026,22,Lundi,Midi,Andouillettes sauce Maroilles et tagliatelles
-2026,22,Lundi,Soir,
-2026,22,Mardi,Midi,"Brochettes, semoule et légumes à couscous"
-2026,22,Mardi,Soir,
-2026,22,Mercredi,Midi,
-2026,22,Mercredi,Soir,Wok de nouilles poulet et légumes (HF)
-2026,22,Jeudi,Midi,Andouillettes sauce Maroilles et tagliatelles
-2026,22,Jeudi,Soir,
-2026,22,Vendredi,Midi,Saucisse fumée et légumes (HF)
-2026,22,Vendredi,Soir,
-2026,22,Samedi,Midi,
-2026,22,Samedi,Soir,
-2026,22,Dimanche,Midi,
-2026,22,Dimanche,Soir,
 2026,21,Lundi,Midi,Extérieur
 2026,21,Lundi,Soir,Brandade de morue
 2026,21,Mardi,Midi,(E) Extérieur / (S) Gamelle
@@ -321,3 +307,17 @@ Annee,Semaine,Jour,Moment,Menu
 2026,21,Samedi,Soir,Lieu en papillotes (HF)
 2026,21,Dimanche,Midi,"Brochettes, semoule et légumes à couscous"
 2026,21,Dimanche,Soir,Crevettes en persillade (HF)
+2026,22,Lundi,Midi,Andouillettes sauce Maroilles et tagliatelles
+2026,22,Lundi,Soir,Maquereaux en boîte et riz
+2026,22,Mardi,Midi,"Brochettes, semoule et légumes à couscous"
+2026,22,Mardi,Soir,
+2026,22,Mercredi,Midi,
+2026,22,Mercredi,Soir,Wok de nouilles poulet et légumes (HF)
+2026,22,Jeudi,Midi,Andouillettes sauce Maroilles et tagliatelles
+2026,22,Jeudi,Soir,
+2026,22,Vendredi,Midi,Saucisse fumée et légumes (HF)
+2026,22,Vendredi,Soir,
+2026,22,Samedi,Midi,
+2026,22,Samedi,Soir,
+2026,22,Dimanche,Midi,
+2026,22,Dimanche,Soir,
